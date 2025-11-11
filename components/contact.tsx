@@ -49,7 +49,7 @@ export default function Contact() {
               </svg>
             </div>
             <h3 className="text-lg font-semibold mb-2">Phone</h3>
-            <p className="text-muted-foreground">+250 788 123 456</p>
+            <p className="text-muted-foreground">+250 788 251 683</p>
           </div>
 
           <div className="p-6 rounded-xl border border-border bg-card hover:border-primary/30 transition-all">
@@ -59,7 +59,7 @@ export default function Contact() {
               </svg>
             </div>
             <h3 className="text-lg font-semibold mb-2">Email</h3>
-            <p className="text-muted-foreground">contact@dryft.rw</p>
+            <p className="text-muted-foreground">dryftrwanda@gmail.com</p>
           </div>
 
           <div className="p-6 rounded-xl border border-border bg-card hover:border-primary/30 transition-all">
@@ -69,7 +69,7 @@ export default function Contact() {
               </svg>
             </div>
             <h3 className="text-lg font-semibold mb-2">Location</h3>
-            <p className="text-muted-foreground">Kigali, Rwanda</p>
+            <p className="text-muted-foreground">📍 Kigali, Rwanda</p>
           </div>
         </div>
 
@@ -120,7 +120,7 @@ export default function Contact() {
                 value={formData.phone}
                 onChange={handleChange}
                 className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:border-primary focus:outline-none transition-colors"
-                placeholder="+250 7XX XXX XXX"
+                placeholder="+250 788 251 683"
               />
             </div>
 
