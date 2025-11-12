@@ -31,7 +31,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-background">
+    <section className="py-20 md:py-32 bg-background min-h-[60vh]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16 animate-float">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Get in Touch</h2>
