@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Header from "@/components/header"
 import Services from "@/components/services"
+import Sustainability from "@/components/sustainability"
 import Footer from "@/components/footer"
 
 export const metadata: Metadata = {
@@ -13,6 +14,7 @@ export default function ServicesPage() {
     <main className="relative min-h-screen">
       <Header />
       <Services />
+      <Sustainability />
       <Footer />
     </main>
   )

@@ -2,7 +2,7 @@ import Header from "@/components/header"
 import Hero from "@/components/hero"
 import WhyDryft from "@/components/why"
 import HowItWorks from "@/components/how-it-works"
-import Sustainability from "@/components/sustainability"
+import Transition from "@/components/transition"
 import AppStore from "@/components/app-store"
 import Footer from "@/components/footer"
 
@@ -21,7 +21,7 @@ export default function Home() {
         <Hero />
         <WhyDryft />
         <HowItWorks />
-        <Sustainability />
+        <Transition />
         <AppStore />
         <Footer />
       </div>
