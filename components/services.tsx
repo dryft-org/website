@@ -36,43 +36,50 @@ export default function Services() {
   ]
 
   return (
-    <section id="services" className="py-20 md:py-32 bg-background relative overflow-hidden">
+    <section className="py-20 md:py-32 bg-background min-h-[60vh] relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-40 left-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-40 right-20 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
+        <div className="absolute top-20 right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-accent/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 space-y-4 animate-float">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Our Services</h2>
+        <div className="text-center mb-20 space-y-4 animate-float">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">Our Services</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Comprehensive mobility solutions designed for everyone
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <div
-              key={service.id}
-              className="p-6 rounded-xl border border-border hover:border-primary/50 bg-gradient-to-br from-card to-card/80 hover:from-primary/5 hover:to-accent/5 transition-all duration-300 group overflow-hidden relative"
-              style={{
-                animation: `slide-in-up 0.6s ease-out forwards`,
-                animationDelay: `${index * 100}ms`,
-                opacity: 0,
-              }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-accent/0 group-hover:from-primary/10 group-hover:to-accent/10 transition-all duration-300" />
-              <div className="relative">
-                <div
-                  className={`w-14 h-14 rounded-full bg-gradient-to-br ${service.color} flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform duration-300`}
-                >
-                  {service.icon}
+        {/* Two rows, two columns layout */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {services.map((service, index) => {
+            const colorClasses = [
+              "from-teal-50/50 to-cyan-50/50", // Ride Booking
+              "from-purple-50/50 to-blue-50/50", // Driver Program
+              "from-orange-50/50 to-red-50/50", // Business Solutions
+              "from-yellow-50/50 to-amber-50/50", // Safety First
+            ]
+            return (
+              <div
+                key={service.id}
+                className={`p-8 rounded-2xl border border-border/60 bg-gradient-to-br ${colorClasses[index]} hover:shadow-2xl hover:border-primary/40 transition-all duration-300 group relative overflow-hidden`}
+                style={{
+                  animation: `slide-in-up 0.6s ease-out forwards`,
+                  animationDelay: `${index * 100}ms`,
+                  opacity: 0,
+                }}
+              >
+                <div className="absolute top-4 right-4 w-20 h-20 bg-white/50 rounded-full blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 mb-6 rounded-xl bg-white/80 flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-300 shadow-md">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-foreground">{service.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
                 </div>
-                <h3 className="text-lg font-semibold mb-3 text-foreground">{service.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

@@ -39,7 +39,7 @@ export default function VehicleTypes() {
   ]
 
   return (
-    <section id="vehicles" className="py-20 md:py-32 bg-secondary/20 relative overflow-hidden">
+    <section className="py-20 md:py-32 bg-secondary/20 relative overflow-hidden min-h-[60vh]">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 right-40 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-40 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
