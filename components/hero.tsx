@@ -1,5 +1,8 @@
 "use client"
 
+import Link from "next/link"
+import Image from "next/image"
+
 export default function Hero() {
   return (
     <section className="relative overflow-hidden py-20 md:py-32 lg:py-40 bg-background">
@@ -28,15 +31,24 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="px-8 py-4 bg-primary text-primary-foreground rounded-full hover:bg-accent transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center gap-2">
+              <Link
+                href="#app-store"
+                className="px-8 py-4 bg-primary text-primary-foreground rounded-full hover:bg-accent transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
+              >
                 🚗 Book a Ride
-              </button>
-              <button className="px-8 py-4 border-2 border-primary text-primary rounded-full hover:bg-primary/10 transition-all duration-300 font-semibold flex items-center gap-2">
+              </Link>
+              <Link
+                href="/partners"
+                className="px-8 py-4 border-2 border-primary text-primary rounded-full hover:bg-primary/10 transition-all duration-300 font-semibold flex items-center justify-center gap-2"
+              >
                 ⚡ Become a Driver
-              </button>
-              <button className="px-8 py-4 border-2 border-primary text-primary rounded-full hover:bg-primary/10 transition-all duration-300 font-semibold flex items-center gap-2">
+              </Link>
+              <Link
+                href="/partners"
+                className="px-8 py-4 border-2 border-primary text-primary rounded-full hover:bg-primary/10 transition-all duration-300 font-semibold flex items-center justify-center gap-2"
+              >
                 🌱 Partner with Us
-              </button>
+              </Link>
             </div>
             
             <p className="text-sm text-muted-foreground max-w-lg leading-relaxed pt-4">
@@ -80,40 +92,23 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Visual - Green Blurred Background with Logo */}
+          {/* Right Visual - Hero Image */}
           <div className="relative h-96 md:h-[500px] lg:h-[600px] animate-slide-right">
             {/* Blurred green background */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-primary/30 to-accent/30 rounded-3xl blur-3xl backdrop-blur-sm"></div>
             
             {/* Main container with glass effect */}
             <div className="relative h-full rounded-3xl bg-gradient-to-br from-primary/20 via-primary/15 to-accent/15 border border-primary/30 backdrop-blur-md flex items-center justify-center overflow-hidden shadow-2xl">
-              {/* Subtle car outlines in background */}
-              <div className="absolute inset-0 opacity-10">
-                <svg className="absolute top-10 left-10 w-16 h-16 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M5 17h14l-1-7H6l-1 7zM7 10V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3M5 17l-1 3h18l-1-3" />
-                </svg>
-                <svg className="absolute top-32 right-20 w-12 h-12 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M5 17h14l-1-7H6l-1 7zM7 10V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3M5 17l-1 3h18l-1-3" />
-                </svg>
-                <svg className="absolute bottom-20 left-20 w-14 h-14 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M5 17h14l-1-7H6l-1 7zM7 10V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3M5 17l-1 3h18l-1-3" />
-                </svg>
-              </div>
-              
-              {/* Central Logo Circle */}
-              <div className="relative z-10">
-                <div className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 relative">
-                  {/* Outer green ring - bouncing animation */}
-                  <div className="absolute inset-0 rounded-full border-8 border-primary animate-ring-bounce"></div>
-                  {/* Middle white ring - delayed bounce */}
-                  <div className="absolute inset-4 rounded-full border-4 border-background animate-ring-bounce-delayed"></div>
-                  {/* Inner green circle - pulsing */}
-                  <div className="absolute inset-8 rounded-full bg-primary animate-ring-pulse"></div>
-                  {/* Center white circle with D - static */}
-                  <div className="absolute inset-12 rounded-full bg-background flex items-center justify-center z-10">
-                    <span className="text-6xl md:text-7xl lg:text-8xl font-bold text-primary">D</span>
-                  </div>
-                </div>
+              {/* Hero Image */}
+              <div className="relative w-full h-full">
+                <Image
+                  src="/hero.jpeg"
+                  alt="Dryft Rwanda - Sustainable Mobility"
+                  fill
+                  className="object-contain p-8"
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                />
               </div>
             </div>
           </div>
