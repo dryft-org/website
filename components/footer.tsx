@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
@@ -66,15 +68,20 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors duration-200">
-                  Business
-                </a>
+                <Link href="/fleet" className="hover:text-white transition-colors duration-200">
+                  Our Fleet
+                </Link>
               </li>
               <li>
+                <Link href="/careers" className="hover:text-white transition-colors duration-200">
+                  Careers
+                </Link>
+              </li>
+              {/* <li>
                 <a href="#" className="hover:text-white transition-colors duration-200">
                   Support
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -88,19 +95,19 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors duration-200">
+                <Link href="/terms" className="hover:text-white transition-colors duration-200">
                   Terms of Service
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors duration-200">
+                <Link href="/safety" className="hover:text-white transition-colors duration-200">
                   Safety
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors duration-200">
+                <Link href="/contact" className="hover:text-white transition-colors duration-200">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -116,12 +123,12 @@ export default function Footer() {
               <a href="#" className="hover:text-white transition-colors duration-200">
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-white transition-colors duration-200">
+              <Link href="/terms" className="hover:text-white transition-colors duration-200">
                 Terms & Conditions
-              </a>
-              <a href="#contact" className="hover:text-white transition-colors duration-200">
+              </Link>
+              <Link href="/contact" className="hover:text-white transition-colors duration-200">
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
         </div>

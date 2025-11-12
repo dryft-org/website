@@ -19,16 +19,16 @@ export default function Header() {
 
         {/* Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          <Link href="#mission" className="text-sm font-medium hover:text-primary transition-colors">
-            Mission
+          <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors">
+            About Us
           </Link>
-          <Link href="#services" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link href="/fleet" className="text-sm font-medium hover:text-primary transition-colors">
+            Our Fleet
+          </Link>
+          <Link href="/services" className="text-sm font-medium hover:text-primary transition-colors">
             Services
           </Link>
-          <Link href="#vehicles" className="text-sm font-medium hover:text-primary transition-colors">
-            Vehicles
-          </Link>
-          <Link href="#faq" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link href="/faq" className="text-sm font-medium hover:text-primary transition-colors">
             FAQ
           </Link>
         </nav>
@@ -36,13 +36,13 @@ export default function Header() {
         {/* CTA */}
         <div className="hidden md:flex gap-4">
           <Link
-            href="#contact"
+            href="/contact"
             className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors font-medium text-sm"
           >
             Contact
           </Link>
           <Link
-            href="#partner"
+            href="/partners"
             className="px-6 py-2 rounded-full bg-primary text-primary-foreground hover:bg-accent transition-colors font-medium text-sm"
           >
             Partner With Us
@@ -61,22 +61,22 @@ export default function Header() {
       {isMenuOpen && (
         <div className="md:hidden border-t border-border bg-background p-4">
           <nav className="flex flex-col gap-4">
-            <Link href="#mission" className="text-sm font-medium hover:text-primary">
-              Mission
+            <Link href="/about" className="text-sm font-medium hover:text-primary">
+              About Us
             </Link>
-            <Link href="#services" className="text-sm font-medium hover:text-primary">
+            <Link href="/fleet" className="text-sm font-medium hover:text-primary">
+              Our Fleet
+            </Link>
+            <Link href="/services" className="text-sm font-medium hover:text-primary">
               Services
             </Link>
-            <Link href="#vehicles" className="text-sm font-medium hover:text-primary">
-              Vehicles
-            </Link>
-            <Link href="#faq" className="text-sm font-medium hover:text-primary">
+            <Link href="/faq" className="text-sm font-medium hover:text-primary">
               FAQ
             </Link>
-            <Link href="#contact" className="text-sm font-medium hover:text-primary">
+            <Link href="/contact" className="text-sm font-medium hover:text-primary">
               Contact
             </Link>
-            <Link href="#partner" className="text-sm font-medium hover:text-primary">
+            <Link href="/partners" className="text-sm font-medium hover:text-primary">
               Partner
             </Link>
           </nav>
