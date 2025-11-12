@@ -1,16 +1,9 @@
 import Header from "@/components/header"
 import Hero from "@/components/hero"
-import Mission from "@/components/mission"
 import WhyDryft from "@/components/why"
-import Services from "@/components/services"
-import VehicleTypes from "@/components/vehicle"
 import HowItWorks from "@/components/how-it-works"
-import Safety from "@/components/safety"
 import Sustainability from "@/components/sustainability"
-import Partners from "@/components/partners"
 import AppStore from "@/components/app-store"
-import FAQ from "@/components/faq"
-import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 
 export default function Home() {
@@ -26,17 +19,10 @@ export default function Home() {
       <div className="relative z-10">
         <Header />
         <Hero />
-        <Mission />
         <WhyDryft />
-        <Services />
-        <VehicleTypes />
         <HowItWorks />
-        <Safety />
         <Sustainability />
-        <Partners />
         <AppStore />
-        <FAQ />
-        <Contact />
         <Footer />
       </div>
     </main>
