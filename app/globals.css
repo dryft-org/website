@@ -3,40 +3,40 @@
 @tailwind utilities;
 
 :root {
-  /* Updated color scheme for Dryft - premium green branding */
+  /* Updated color scheme for Dryft - green and dark green/black theme */
   --background: oklch(0.98 0.01 120);
-  --foreground: oklch(0.15 0.02 120);
+  --foreground: oklch(0.1 0.01 0); /* Dark black for text */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.02 120);
+  --card-foreground: oklch(0.1 0.01 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.02 120);
-  --primary: oklch(0.45 0.22 142.5);
+  --popover-foreground: oklch(0.1 0.01 0);
+  --primary: oklch(0.5 0.2 142.5); /* Bright green */
   --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.95 0.05 140);
-  --secondary-foreground: oklch(0.45 0.22 142.5);
+  --secondary-foreground: oklch(0.5 0.2 142.5);
   --muted: oklch(0.92 0.02 120);
   --muted-foreground: oklch(0.5 0.05 120);
-  --accent: oklch(0.55 0.25 142.5);
+  --accent: oklch(0.35 0.15 142.5); /* Dark green */
   --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
   --border: oklch(0.92 0.01 120);
   --input: oklch(0.95 0.01 120);
-  --ring: oklch(0.45 0.22 142.5);
-  --chart-1: oklch(0.45 0.22 142.5);
-  --chart-2: oklch(0.55 0.25 142.5);
+  --ring: oklch(0.5 0.2 142.5);
+  --chart-1: oklch(0.5 0.2 142.5);
+  --chart-2: oklch(0.35 0.15 142.5);
   --chart-3: oklch(0.65 0.2 140);
   --chart-4: oklch(0.35 0.2 145);
   --chart-5: oklch(0.5 0.2 140);
   --radius: 0.625rem;
   --sidebar: oklch(0.98 0.01 120);
-  --sidebar-foreground: oklch(0.15 0.02 120);
-  --sidebar-primary: oklch(0.45 0.22 142.5);
+  --sidebar-foreground: oklch(0.1 0.01 0);
+  --sidebar-primary: oklch(0.5 0.2 142.5);
   --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.55 0.25 142.5);
+  --sidebar-accent: oklch(0.35 0.15 142.5);
   --sidebar-accent-foreground: oklch(1 0 0);
   --sidebar-border: oklch(0.92 0.01 120);
-  --sidebar-ring: oklch(0.45 0.22 142.5);
+  --sidebar-ring: oklch(0.5 0.2 142.5);
 }
 
 .dark {
