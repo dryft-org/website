@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -12,10 +13,15 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="md:col-span-2 space-y-5">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">D</span>
+              <div className="relative h-12 w-auto">
+                <Image 
+                  src="/bg.png" 
+                  alt="DRYFT Logo" 
+                  width={150} 
+                  height={48} 
+                  className="h-12 w-auto object-contain"
+                />
               </div>
-              <span className="font-bold text-2xl tracking-tight text-white uppercase">DRYFT</span>
             </div>
             <p className="text-sm text-gray-300 leading-relaxed max-w-md">
               Transforming urban mobility in Rwanda. Safe, reliable, and affordable transportation connecting people and
